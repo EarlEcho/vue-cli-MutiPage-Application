@@ -4,6 +4,30 @@
 
 3、直接使用 cnpm可能会导致依赖不正确。强烈建议给 npm 设置 taobao 的 registry。
 
+4、在当前页面用非img标签的元素使用图片资源，需要事先import才能正确打包显示，例如如果要使用：src的方式显示图片
+```
+ import Banner1 from './assets/43.jpeg';
+ import Banner2 from './assets/33.jpeg';
+ import Banner3 from './assets/111.jpeg';
+
+  homeImgSwiper: [{
+      url: 'javascript:',
+      img: Banner1,
+      title: 'banner1'
+  }, {
+      url: 'javascript:',
+      img: Banner2,
+      title: 'banner2'
+  }, {
+      url: 'javascript:',
+      img: Banner3,
+      title: 'banner3'
+  }],
+
+```
+
+
+
 npm install --registry=https://registry.npm.taobao.org
 
 ``` bash

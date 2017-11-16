@@ -17,6 +17,10 @@
     import HbHead from 'components/HbHead';
     import {Swiper} from 'vux'
 
+    import Banner1 from './assets/43.jpeg';
+    import Banner2 from './assets/33.jpeg';
+    import Banner3 from './assets/111.jpeg';
+
     export default {
 
         components: {
@@ -26,21 +30,24 @@
             return {
                 homeImgSwiper: [{
                     url: 'javascript:',
-                    img: '/static/assets/43.jpeg',
-                    title: '送你一朵fua'
+                    img: Banner1,
+                    title: 'banner1'
                 }, {
                     url: 'javascript:',
-                    img: '/static/assets/33.jpeg',
-                    title: '送你一辆车'
+                    img: Banner2,
+                    title: 'banner2'
                 }, {
                     url: 'javascript:',
-                    img: '/static/assets/111.jpeg',
-                    title: '送你一次旅行'
+                    img: Banner3,
+                    title: 'banner3'
                 }],
-                swiperIndex: 1
+                swiperIndex: 0
             }
         },
-        methods: {}
+        mounted: function () {
+            console.log(this.homeImgSwiper)
+
+        }
     }
 </script>
 
