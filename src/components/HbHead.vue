@@ -56,7 +56,7 @@
 
     .headMargin {
         clear: both;
-        height: 50px;
+        height: 46px;
     }
 
 </style>

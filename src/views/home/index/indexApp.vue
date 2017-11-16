@@ -1,12 +1,14 @@
 <template>
     <div class="mainWarp">
         <hb-head headfont="首页"></hb-head>
-        <div>
-            <swiper :list="homeImgSwiper" v-model="swiperIndex"></swiper>
-            <!--<img src="./assets/43.jpeg" alt=""/>-->
+        <div class="home-swiper">
+            <swiper :list="homeImgSwiper" v-model="swiperIndex" :interval="2000" :auto="true"></swiper>
+        </div>
+        <div class="product-list">
+
         </div>
 
-
+        <dz-main-switch></dz-main-switch>
     </div>
 </template>
 
@@ -14,7 +16,8 @@
 
     import Lib from 'assets/js/Lib';
 
-    import HbHead from 'components/HbHead';
+    import HbHead from 'components/HbHead'
+    import DzMainSwitch from 'components/MainSwitch';
     import {Swiper} from 'vux'
 
     import Banner1 from './assets/43.jpeg';
@@ -24,7 +27,7 @@
     export default {
 
         components: {
-            HbHead, Swiper
+            HbHead, Swiper, DzMainSwitch
         },
         data() {
             return {
@@ -45,7 +48,6 @@
             }
         },
         mounted: function () {
-            console.log(this.homeImgSwiper)
 
         }
     }
