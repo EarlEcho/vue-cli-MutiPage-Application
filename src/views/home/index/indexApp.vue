@@ -1,9 +1,12 @@
 <template>
-    <div id="app">
+    <div class="mainWarp">
+        <hb-head headfont="首页"></hb-head>
         <div>
-            <divider>vux UI 展示</divider>
-            <p>首页</p>
+            <swiper :list="homeImgSwiper" v-model="swiperIndex"></swiper>
+            <!--<img src="./assets/43.jpeg" alt=""/>-->
         </div>
+
+
     </div>
 </template>
 
@@ -11,67 +14,40 @@
 
     import Lib from 'assets/js/Lib';
 
-    import {Cell, Group, Divider} from 'vux'
-
+    import HbHead from 'components/HbHead';
+    import {Swiper} from 'vux'
 
     export default {
+
+        components: {
+            HbHead, Swiper
+        },
         data() {
             return {
-
+                homeImgSwiper: [{
+                    url: 'javascript:',
+                    img: '/static/assets/43.jpeg',
+                    title: '送你一朵fua'
+                }, {
+                    url: 'javascript:',
+                    img: '/static/assets/33.jpeg',
+                    title: '送你一辆车'
+                }, {
+                    url: 'javascript:',
+                    img: '/static/assets/111.jpeg',
+                    title: '送你一次旅行'
+                }],
+                swiperIndex: 1
             }
         },
-        components: {
-            Divider
-        },
-        //实例初始化最之前，无法获取到data里的数据
-        beforeCreate() {
-
-
-        },
-        //在挂载开始之前被调用
-        beforeMount() {
-
-
-        },
-        //已成功挂载，相当ready()
-        mounted() {
-
-
-        },
-        //相关操作事件
         methods: {}
     }
 </script>
 
 <style lang="less">
 
-
-    .note {
-        color: #666;
-        padding: 10px;
-        font-size: 12px;
+    img {
+        max-width: 100%;
     }
-
-    .note p {
-        line-height: 25px;
-    }
-
-    .weui-cells {
-        font-size: 14px !important;
-    }
-
-    /*
-     * less 展示
-     */
-    .lessTest {
-        .listbox {
-            border-radius: 10px;
-            font-size: 14px;
-        }
-        .boxcontent {
-            padding: 15px;
-        }
-    }
-
 
 </style>
