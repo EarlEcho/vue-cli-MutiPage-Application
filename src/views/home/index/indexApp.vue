@@ -17,7 +17,6 @@
             max-width: 100%;
         }
     }
-
     .product-infos {
         border: solid 1px;
         /*height: 40px;*/
@@ -45,7 +44,7 @@
                     <div class="product-infos">
                         <p class="product-title">商品标题:西瓜西瓜西瓜西瓜西瓜西瓜西瓜西瓜西瓜西瓜西瓜西瓜西瓜西瓜西瓜西瓜西瓜西瓜西瓜西瓜西瓜西瓜</p>
                         <p class="product-price">
-                            <i class="icon iconfont icon-qian"></i>
+                            <i class="icon iconfont icon-qian color_red">99.99</i>
                         </p>
                     </div>
                 </grid-item>
