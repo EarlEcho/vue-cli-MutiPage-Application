@@ -49,5 +49,7 @@
 </script>
 
 <style lang="less">
-
+    .dz-main-switch {
+        position: fixed !important;
+    }
 </style>

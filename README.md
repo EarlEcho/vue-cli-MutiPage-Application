@@ -3,6 +3,7 @@
 2、`npm run dev`将会自动在浏览器打开页面，如未正常打开，请访问完整的路径`http:// localhost:8091/views/home/list.html`
 
 3、直接使用 cnpm可能会导致依赖不正确。强烈建议给 npm 设置 taobao 的 registry。
+npm install --registry=https://registry.npm.taobao.org
 
 4、在当前页面用非img标签的元素使用图片资源，需要事先import才能正确打包显示，例如如果要使用：src的方式显示图片
 ```
@@ -26,9 +27,6 @@
 
 ```
 
-
-
-npm install --registry=https://registry.npm.taobao.org
 
 ``` bash
 # 安装依赖
